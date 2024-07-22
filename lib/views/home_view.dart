@@ -16,6 +16,11 @@ class HomeView extends StatelessWidget {
         ),
       ),
       body: const TaskCard(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+        backgroundColor: Theme.of(context).cardColor,
+      ),
     );
   }
 }
