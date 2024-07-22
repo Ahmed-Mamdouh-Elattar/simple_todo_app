@@ -15,6 +15,7 @@ class HomeView extends StatelessWidget {
           ),
         ),
       ),
+      body: const TaskCard(),
     );
   }
 }
