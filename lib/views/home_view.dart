@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:simple_todo_app/helper/show_dialog_function.dart';
+
 import 'package:simple_todo_app/widgets/task_card.dart';
 
 class HomeView extends StatelessWidget {
@@ -17,9 +19,11 @@ class HomeView extends StatelessWidget {
       ),
       body: const TaskCard(),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
+        onPressed: () {
+          dialogForAddTask(context);
+        },
         backgroundColor: Theme.of(context).cardColor,
+        child: const Icon(Icons.add),
       ),
     );
   }
