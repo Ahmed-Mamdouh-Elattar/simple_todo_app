@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:simple_todo_app/widgets/custom_text_button.dart';
 import 'package:simple_todo_app/widgets/custom_text_field.dart';
 
-dialogForAddTask(BuildContext context) {
+dialogForAddTask(BuildContext context, {required void Function()? onPressed}) {
   showDialog(
     context: context,
     builder: (context) {

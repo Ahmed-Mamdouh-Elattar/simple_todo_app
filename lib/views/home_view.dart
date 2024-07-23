@@ -20,7 +20,7 @@ class HomeView extends StatelessWidget {
       body: const TaskCard(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          dialogForAddTask(context);
+          dialogForAddTask(context, onPressed: () {});
         },
         backgroundColor: Theme.of(context).cardColor,
         child: const Icon(Icons.add),
