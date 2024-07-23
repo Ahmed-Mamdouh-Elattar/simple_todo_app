@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:simple_todo_app/constants.dart';
+import 'package:simple_todo_app/models/task_model.dart';
 import 'package:simple_todo_app/views/home_view.dart';
 
-void main() {
+void main() async {
+  await Hive.initFlutter();
+  Hive.registerAdapter(TaskModelAdapter());
+  await Hive.openBox(kBoxName);
+
   runApp(const TodoApp());
 }
 
