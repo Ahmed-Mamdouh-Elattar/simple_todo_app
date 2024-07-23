@@ -7,7 +7,7 @@ import 'package:simple_todo_app/views/home_view.dart';
 void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(TaskModelAdapter());
-  await Hive.openBox(kBoxName);
+  await Hive.openBox<TaskModel>(kBoxName);
 
   runApp(const TodoApp());
 }
