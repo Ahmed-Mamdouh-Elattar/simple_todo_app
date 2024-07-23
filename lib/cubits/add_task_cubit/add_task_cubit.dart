@@ -9,7 +9,6 @@ class AddTaskCubit extends Cubit<TaskState> {
   AddTaskCubit() : super(TaskInitial());
 
   void addTask(TaskModel task) {
-    emit(TaskLoading());
     try {
       Hive.box<TaskModel>(kBoxName).add(task);
       emit(TaskSuccess());

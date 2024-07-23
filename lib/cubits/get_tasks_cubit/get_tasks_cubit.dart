@@ -11,7 +11,6 @@ class GetTasksCubit extends Cubit<GetTasksState> {
   GetTasksCubit() : super(GetTasksInitial());
 
   void getTasks() {
-    emit(GetTasksLoading());
     try {
       tasks = Hive.box<TaskModel>(kBoxName).values.toList();
       emit(GetTasksSuccess(tasks: tasks));
